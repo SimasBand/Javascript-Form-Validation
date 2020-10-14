@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1> Simas & Co. -Customer Information </h1>
+
+<form action="submit.txt">
+<p>First Name:</p>
+<input type="text" name="First Name">
+<p>Last Name:</p>
+<input type="text" name="Last Name">
+<p>Email Address:</p>
+</form>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
